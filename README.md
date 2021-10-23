@@ -1,2 +1,2 @@
 # hackathon
-The UKISU team reop
+The UKISU team repo
