@@ -3,12 +3,10 @@
 
 ## Install instructions
 - Install [molar](https://github.com/aspuru-guzik-group/molar) client and backend. You can find the instructions [here](https://molar.readthedocs.io/en/latest/index.html) 
-- Create a conda environment with the environment file in the folder.
-
-```conda create -f environment.yml```
+- Create a conda environment with the environment file in the folder. ```conda create -f environment.yml```
 - Copy the `.py` files from `schema` folder to `migrations` in the the molar installation directory (default name is `molar_data_dir`).
 - Edit the `config.py`. Add the admin email and password used during `molar` installation 
-- Make migrations to the django project ```python manage.py makemigrations```
+- Make migrations to the django project ```python manage.py makemigrations``` and
 ```python manage.py migrate```
 
 ## Usage
