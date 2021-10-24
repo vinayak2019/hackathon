@@ -3,7 +3,7 @@
 MolEx: Extending **Mol**ar to **Ex**perimental data.
 
 
-This UKISU team repo for the hackathon hosted by Acceleration Consortium.
+This UKISU team repo for  hackathon hosted by Acceleration Consortium.
 
 
 
