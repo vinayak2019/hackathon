@@ -8,9 +8,8 @@
 ```conda create -f environment.yml```
 - Copy the `.py` files from `schema` folder to `migrations` in the the molar installation directory (default name is `molar_data_dir`).
 - Edit the `config.py`. Add the admin email and password used during `molar` installation 
-- Make migrations to the django project
-```python manage.py makemigrations
-python manage.py migrate```
+- Make migrations to the django project ```python manage.py makemigrations```
+```python manage.py migrate```
 
 ## Usage
 - Start the backend `molar` sever.
