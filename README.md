@@ -9,4 +9,4 @@ This UKISU team repo for the hackathon hosted by Acceleration Consortium.
 
 
 # The product
-
+![](demo.gif)
