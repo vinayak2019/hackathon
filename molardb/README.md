@@ -11,7 +11,8 @@
 
 ## Usage
 - Start the backend `molar` sever.
-- Run the django server. Do not forget to change the port. Django runs ar `8000` but `molar` uses `8000`.
+- Run the django server. Do not forget to change the port. Django runs ar `8000` but `molar` uses `8000`
+ 
 ```python manage.py runserver 127.0.0.1:8080```
 
 ## TODO
