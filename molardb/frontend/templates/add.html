@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %}
+  Add data
+{% endblock title %}
+
+
+{% block content %}
+
+    <section class="header2 cid-sMFTyasx6q mbr-fullscreen mbr-parallax-background" id="header2-2">
+
+
+    <div class="container">
+        {% csrf_token %}
+        <div class="row justify-content-md-center"><h2><strong>Add Data</strong></h2></div>
+        <br>
+
+            <div class="col-md-12 offset-4" id="example1" class="hot">
+                <br>
+        </div>
+
+        <div class="mbr-section-btn align-center">
+                <button id="discard" onclick="location.reload(true)" class="btn btn-success display-4">Discard data</button>
+                <button id="save" onclick="insertdata()" class="btn btn-success display-4">Save data</button>
+        </div>
+
+
+        <script type="text/javascript">
+const container = document.querySelector('#example1');
+const save = document.querySelector('#save');
+
+
+const hot = new Handsontable(container, {
+  startRows: 1,
+  minSpareRows: 1,
+  rowHeaders: true,
+  colHeaders: {{ table_headers|safe }},
+  height: 'auto',
+  licenseKey: 'non-commercial-and-evaluation',
+});
+</script>
+            </div>
+
+        <script>
+            function test2() {
+
+                var ar = [];
+                var lis = {{ table_headers|safe }};
+                for (var i = 0; i < hot.getData().length; i++) {
+                    var dic = {};
+                    for (var j = 0; j < lis.length; j++) {
+                        if (hot.getData()[i][j]){
+                        dic[lis[j]] = hot.getData()[i][j]}
+                    }
+                    ar.push(dic);
+                }
+                return ar
+            }
+            function insertdata() {
+            $.ajax({
+                type: "POST",
+
+                url: "/ajax/insert",
+                data: {
+                    'arr': JSON.stringify(test2()),
+                    'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val(),},
+
+                success: function(data) {
+                    alert("Data added successfully!")
+                }
+            }
+            );
+                }
+
+        </script>
+</section>
+
+
+{% endblock content %}

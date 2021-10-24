@@ -1,0 +1,5 @@
+{
+  "server_url": "http://localhost:8000",
+  "admin_email": "molar@example.com",
+  "admin_password": "molar123"
+}

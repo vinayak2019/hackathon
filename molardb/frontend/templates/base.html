@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html   lang="en">
+<head>
+  <!-- Site made with Mobirise Website Builder v5.3.10, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.3.10, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{% static 'database/assets/images/logo.png' %}" type="image/x-icon">
+  <meta name="description" content="">
+
+
+  <title>{% block title %}{% endblock title %}</title>
+  <link rel="stylesheet" href="{% static 'database/assets/tether/tether.min.css' %}">
+  <link rel="stylesheet" href="{% static 'database/assets/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'database/assets/bootstrap/css/bootstrap-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'database/assets/bootstrap/css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'database/assets/dropdown/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'database/assets/socicon/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'database/assets/theme/css/style.css' %}">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap&display=swap"></noscript>
+  <link rel="preload" as="style" href="{% static 'database/assets/mobirise/css/mbr-additional.css' %}">
+    <link rel="stylesheet" href="{% static 'database/assets/mobirise/css/mbr-additional.css' %}" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+
+
+
+</head>
+<body>
+
+  <section class="menu menu2 cid-sMFTobhFKb" nonce="menu" id="menu2-0">
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7" href="{% url 'login' %}">UK-ISU Hackathon Team</a></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                    <li class="nav-item"><a class="nav-link link text-black display-4" href="{% url 'login' %}">Login</a>
+                    <li class="nav-item"><a class="nav-link link text-black display-4" href="{% url 'create_db' %}">Create Database</a>
+                    <li class="nav-item"><a class="nav-link link text-black display-4" href="{% url 'add_data' %}">Add Data</a>
+                    <li class="nav-item"><a class="nav-link link text-black display-4" href="{% url 'view_data' %}">View Data</a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+</section>
+
+{% block content%}{% endblock %}
+
+<section class="footer7 cid-sMFTrPZodX" nonce="footers" id="footer7-1">
+
+
+
+
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                    Created for the&nbsp;Acceleration Consortium Hackathon 2021 by the ukisu team.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;">
+      <a href="https://mobirise.site/p" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a>
+      <p style="flex: 0 0 auto; margin:0; padding-right:1rem;"></p></section>
+  <script src="{% static 'database/assets/web/assets/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'database/assets/popper/popper.min.js' %}"></script>
+  <script src="{% static 'database/assets/tether/tether.min.js' %}"></script>
+  <script src="{% static 'database/assets/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'database/assets/smoothscroll/smooth-scroll.js' %}"></script>
+  <script src="{% static 'database/assets/dropdown/js/nav-dropdown.js' %}"></script>
+  <script src="{% static 'database/assets/dropdown/js/navbar-dropdown.js' %}"></script>
+  <script src="{% static 'database/assets/touchswipe/jquery.touch-swipe.min.js' %}"></script>
+  <script src="{% static 'database/assets/parallax/jarallax.min.js' %}"></script>
+  <script src="{% static 'database/assets/theme/js/script.js' %}"></script>
+
+
+</body>
+</html>

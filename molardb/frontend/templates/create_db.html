@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}
+  Create Database
+{% endblock title %}
+
+
+{% block content %}
+<section class="header2 cid-sMFTyasx6q mbr-fullscreen mbr-parallax-background" id="header2-2">
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+
+            <div class="col-md-auto">
+                <div class="col-md-auto"><h2><strong>Create Database</strong></h2></div>
+                <br>{{ msg }} <br>
+
+        <form enctype="multipart/form-data" method="POST">
+
+            {% csrf_token %}
+            {{ form|crispy }}
+            <br><br>
+            <div class="col-auto mbr-section-btn align-center">
+                <button type="submit" value="save" class="btn btn-success display-4">Create DATABASE</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

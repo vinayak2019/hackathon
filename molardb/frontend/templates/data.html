@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %}
+  Login
+{% endblock title %}
+
+
+{% block content %}
+<section class="header2 cid-sMFTyasx6q mbr-fullscreen mbr-parallax-background" id="header2-2">
+
+
+    <div class="container">
+
+                <div class="row justify-content-md-center"><h2><strong>Data</strong></h2></div>
+        <div class="col-md-12 offset-2" id="example"></div>
+    </div>
+    <script type="text/javascript">
+        data = JSON.parse('{{ table|safe }}');
+    const container = document.getElementById('example');
+const hot = new Handsontable(container, {
+  data: data,
+    colHeaders: {{ table_headers|safe }},
+  rowHeaders: true,
+  height: 'auto',
+    customBorders: true,
+    filters: true,
+    readOnly:true,
+  licenseKey: 'non-commercial-and-evaluation' // for non-commercial use only
+});
+    </script>
+</section>
+{% endblock content %}
